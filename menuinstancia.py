@@ -24,6 +24,7 @@ class Menu():
             print(Fore.CYAN+ "2. Gestionar películas")
             print(Fore.CYAN+ "3. Filtrado")
             print(Fore.CYAN+ "4. Gráficas")
+            print(Fore.CYAN+ "5. Salir")
             opcion=input(Fore.YELLOW+'Ingrese una opcion: ')
            
 
@@ -45,6 +46,12 @@ class Menu():
                     Lec.Graficar() 
                 else:
                     print("Cargue el archivo primero")  
+            elif opcion == '5':
+                print("¡Adiós!")
+                mm=False
+            else:
+                print("Opción incorrecta")
+
             
                 
 
