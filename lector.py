@@ -3,8 +3,8 @@ from colorama import Fore
 Lis=Lista()
 class Lectorcito:
     def openFile(self):
-            #file=input("Ingrese la ruta del archivo ")
-            file="archivo.lfp"
+            file=input("Ingrese la ruta del archivo ")
+            
             if file is None:
                 print("No has seleccioado ningun archivo.".center(50, "!"))
             else:
@@ -24,14 +24,18 @@ class Lectorcito:
                                         arreglo=dato1[1].split(",") 
                                         for actor in arreglo:
                                               actor1=actor.strip(" ")
+                                              Lis.insertaractor(actor1)
                                               actores.append(actor1)
                                               
                                               
                                               
                                         print(actor)
                                         Lis.insertar(nombre,actores,anio,gen)
+                    print(Fore.GREEN+"Archivo cargado correctamente")
                 else:
                     print("Archivo incorrecto, debe tener extensión LFP ")
+                """Lis.imprimiractor()
+                Lis.graficar()"""
     def almacenar(self,line):
                     dato=line.split(";")
                     print(dato)
@@ -105,5 +109,8 @@ class Lectorcito:
                     regresarf=True
                 else:
                     print("Ingresa una opción válida")
+    def Graficar(self):
+          Lis.graficar()
+          
             
                   

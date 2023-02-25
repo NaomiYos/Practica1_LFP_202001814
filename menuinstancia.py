@@ -24,8 +24,8 @@ class Menu():
             print(Fore.CYAN+ "2. Gestionar películas")
             print(Fore.CYAN+ "3. Filtrado")
             print(Fore.CYAN+ "4. Gráficas")
-            opcion=input(Fore.YELLOW+'Ingrese una opcion')
-            print(opcion)
+            opcion=input(Fore.YELLOW+'Ingrese una opcion: ')
+           
 
             if opcion=="1":
                 Lec.openFile()
@@ -35,12 +35,17 @@ class Menu():
                     Lec.GestionarPelis()     
                 else:
                     print("Cargue el archivo primero")  
-               # Lista_Actores.eliminarActor(car)
             elif opcion == '3':
                 if flagC:
                     Lec.Filtrar()   
                 else:
                     print("Cargue el archivo primero")  
+            elif opcion == '4':
+                if flagC:
+                    Lec.Graficar() 
+                else:
+                    print("Cargue el archivo primero")  
+            
                 
 
 
